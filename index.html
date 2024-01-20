@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Brand | Coming Soon</title>
-<style>
-  body { text-align: center; padding: 50px; font-family: 'Arial', sans-serif; }
-  h1 { font-size: 2em; }
-  p { font-size: 1.2em; }
-  #waitlist { margin-top: 20px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quroum - Reimaging Conversational Media</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Include Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    h1 {
+      font-family: 'Permanent Marker', cursive;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    body,
+    p,
+    button {
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
 </head>
-<body>
-  <h1>Take Your Brand From Unnoticed to Unforgettable</h1>
-  <p>Join the waitlist to be the first to know when we launch.</p>
-  <form id="waitlist">
-    <input type="email" placeholder="Enter your email" required>
-    <input type="submit" value="Join Waitlist">
-  </form>
+
+<body class="flex justify-center items-center h-screen text-gray-800">
+  <!-- Fixed header with animation -->
+  <div class="fixed top-0 w-full z-10 animate__animated animate__fadeIn animate__delay-1s">
+    <div class="text-center p-5">
+      <h1 class="text-5xl mb-3">The Quroum</h1>
+    </div>
+  </div>
+
+  <!-- Main content with animations -->
+  <div class="container mx-auto text-center pt-20 p-5">
+    <img src="splash_image.png" alt="Quroum Logo"
+      class="mx-auto mb-4 w-2/3 animate__animated animate__fadeIn animate__delay-2s">
+    <h2 class="font-bold text-4xl text-gray-800 animate__animated animate__fadeIn animate__delay-3s">Shaping the Future
+      of Conversational Media</h2>
+    <p class="text-xl text-gray-600 pt-4 animate__animated animate__fadeIn animate__delay-4s">Engage in live, AI-driven
+      dialogues on any topic, transforming passive listening into active exploration.</p>
+    <button
+      class="bg-red-400 hover:bg-red-500 text-white font-bold py-2  px-4 rounded uppercase tracking-wide mt-4 transition duration-300 ease-in-out animate__animated animate__fadeIn animate__delay-5s">
+      JOIN WAITLIST
+    </button>
+  </div>
 </body>
+
 </html>
