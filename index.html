@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quroum - Reimaging Conversational Media</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
     body {
-      background-color: #f0f4f8; /* Muted blue background */
+      background-color: #f0f4f8;
+      /* Muted blue background */
     }
-    
+
     h1 {
       font-family: 'Permanent Marker', cursive;
     }
 
     button {
       font-family: 'Open Sans', sans-serif;
-      color: #3b82f6; /* Muted blue color */
+      color: #3b82f6;
+      /* Muted blue color */
     }
 
     /* Custom animation speeds and delays */
     .animate__animated {
-      animation-duration: 0.5s !important; /* Quick animations */
+      animation-duration: 0.5s !important;
+      /* Quick animations */
     }
 
     .animate__delay-1 {
@@ -56,6 +62,7 @@
     }
   </style>
 </head>
+
 <body class="flex justify-center items-center h-screen text-gray-800">
   <!-- Fixed header with animation -->
   <div class="fixed top-0 w-full z-10 animate__animated animate__fadeIn">
@@ -66,21 +73,34 @@
 
   <!-- Main content with animations -->
   <div class="container mx-auto text-center pt-20 p-5">
-    <img src="splash_image.png" alt="Quroum Logo" class="mx-auto mb-4 w-2/3 animate__animated animate__fadeIn animate__delay-1">
-    <h2 class="font-bold text-4xl animate__animated animate__fadeIn animate__delay-2">Shaping the Future of Conversational Media</h2>
-    <p class="text-xl pt-4 animate__animated animate__fadeIn animate__delay-3">Engage in live, AI-driven dialogues on any topic, transforming passive listening into active exploration.</p>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase tracking-wide mt-4 transition duration-300 ease-in-out animate__animated animate__fadeIn animate__delay-4" onclick="showEmailForm()">
+    <img src="splash_image.png" alt="Quroum Logo"
+      class="mx-auto mb-4 w-2/3 animate__animated animate__fadeIn animate__delay-1">
+    <h2 class="font-bold text-4xl animate__animated animate__fadeIn animate__delay-2">Conversations, Not Just Podcasts:
+      Your Stories, Your Way</h2>
+    <p class="text-xl pt-4 animate__animated animate__fadeIn animate__delay-3">Imagine a world where each podcast morphs
+      with your thoughts, where your questions and choices don't just participate, but become essential in shaping
+      AI-driven narratives in real-time.</p>
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase tracking-wide mt-4 transition duration-300 ease-in-out animate__animated animate__fadeIn animate__delay-4"
+      onclick="showEmailForm()">
       JOIN WAITLIST
     </button>
 
     <!-- Tailwind Form -->
     <div id="emailForm" class="w-full max-w-sm mx-auto mt-6 animate__animated animate__fadeIn">
-      <form action="https://formspree.io/f/xjvngbyw" method="POST" class="flex items-center border-b border-blue-500 py-2">
-        <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" name="email" placeholder="Your Email" aria-label="Email">
-        <button class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
+      <form action="https://formspree.io/f/xjvngbyw" method="POST"
+        class="flex items-center border-b border-blue-500 py-2">
+        <input
+          class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          type="email" name="email" placeholder="Your Email" aria-label="Email">
+        <button
+          class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded"
+          type="submit">
           Sign Up
         </button>
-        <button class="flex-shrink-0 border-transparent border-4 text-blue-500 hover:text-blue-800 text-sm py-1 px-2 rounded" type="button" onclick="hideEmailForm()">
+        <button
+          class="flex-shrink-0 border-transparent border-4 text-blue-500 hover:text-blue-800 text-sm py-1 px-2 rounded"
+          type="button" onclick="hideEmailForm()">
           Cancel
         </button>
       </form>
@@ -99,4 +119,5 @@
     }
   </script>
 </body>
+
 </html>
