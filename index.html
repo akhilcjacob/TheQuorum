@@ -4,34 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quroum - Reimaging Conversational Media</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
     body {
       background-color: #f0f4f8; /* Muted blue background */
     }
+    
+    h1 {
+      font-family: 'Permanent Marker', cursive;
+    }
 
-
-
- button {
+    button {
       font-family: 'Open Sans', sans-serif;
       color: #3b82f6; /* Muted blue color */
     }
 
-    /* Custom animation speeds */
-    .animate__faster {
-      animation-duration: 0.5s !important;
+    /* Custom animation speeds and delays */
+    .animate__animated {
+      animation-duration: 0.5s !important; /* Quick animations */
     }
 
-    .animate__fast {
-      animation-duration: 1s !important;
+    .animate__delay-1 {
+      animation-delay: 0.5s;
     }
 
-    .animate__medium {
-      animation-duration: 1.5s !important;
+    .animate__delay-2 {
+      animation-delay: 1s;
+    }
+
+    .animate__delay-3 {
+      animation-delay: 1.5s;
+    }
+
+    .animate__delay-4 {
+      animation-delay: 2s;
     }
 
     /* Tailwind Form */
@@ -49,7 +58,7 @@
 </head>
 <body class="flex justify-center items-center h-screen text-gray-800">
   <!-- Fixed header with animation -->
-  <div class="fixed top-0 w-full z-10 animate__animated animate__fadeIn animate__fast">
+  <div class="fixed top-0 w-full z-10 animate__animated animate__fadeIn">
     <div class="text-center p-5">
       <h1 class="text-5xl mb-3">The Quroum</h1>
     </div>
@@ -57,15 +66,10 @@
 
   <!-- Main content with animations -->
   <div class="container mx-auto text-center pt-20 p-5">
-    <img src="splash_image.png" alt="Quroum Logo"
-      class="mx-auto mb-4 w-2/3 animate__animated animate__fadeIn animate__medium">
-    <h2 class="font-bold text-4xl animate__animated animate__fadeIn animate__medium">Shaping the Future
-      of Conversational Media</h2>
-    <p class="text-xl pt-4 animate__animated animate__fadeIn animate__medium">Engage in live, AI-driven
-      dialogues on any topic, transforming passive listening into active exploration.</p>
-    <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase tracking-wide mt-4 transition duration-300 ease-in-out animate__animated animate__fadeIn animate__faster"
-      onclick="showEmailForm()">
+    <img src="splash_image.png" alt="Quroum Logo" class="mx-auto mb-4 w-2/3 animate__animated animate__fadeIn animate__delay-1">
+    <h2 class="font-bold text-4xl animate__animated animate__fadeIn animate__delay-2">Shaping the Future of Conversational Media</h2>
+    <p class="text-xl pt-4 animate__animated animate__fadeIn animate__delay-3">Engage in live, AI-driven dialogues on any topic, transforming passive listening into active exploration.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase tracking-wide mt-4 transition duration-300 ease-in-out animate__animated animate__fadeIn animate__delay-4" onclick="showEmailForm()">
       JOIN WAITLIST
     </button>
 
