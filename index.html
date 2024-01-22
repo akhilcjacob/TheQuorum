@@ -8,6 +8,7 @@
   <meta name="keywords" content="Quorum, Podcast, Interactive, Live, Conversations">
   <title>Quorum - Unleash the Power of Live, Interactive Podcasts</title>
   <link rel="icon" type="image/x-icon" href="favicon2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap"
     rel="stylesheet">
@@ -52,6 +53,10 @@
       animation-delay: 2s;
     }
 
+    .animate__delay-5 {
+      animation-delay: 2.5s;
+    }
+
     #emailForm {
       display: none;
       opacity: 0;
@@ -61,6 +66,14 @@
     #emailForm.visible {
       display: block;
       opacity: 1;
+    }
+
+    #founderInfo.hidden {
+      display: none;
+    }
+
+    #founderInfo.visible {
+      display: block;
     }
   </style>
 </head>
@@ -88,6 +101,8 @@
       onclick="showEmailForm()">Join the conversation</button>
 
     <div id="emailForm" class="w-full max-w-sm mx-auto mt-6 animate__animated animate__fadeIn">
+      <p class="pb-2">Join our waitlist to gain early access & updates</p>
+
       <form action="https://formspree.io/f/xjvngbyw" method="POST"
         class="flex items-center border-b border-yellow-600 py-2">
         <input
@@ -101,6 +116,43 @@
           type="button" onclick="hideEmailForm()">Cancel</button>
       </form>
     </div>
+
+    <!-- Founder Information Button -->
+    <div class="text-center mt-8 animate__animated animate__fadeIn animate__delay-5 ">
+      <button
+        class="border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white font-bold py-2 px-4 rounded uppercase tracking-wide transition duration-300 ease-in-out"
+        onclick="toggleFounderInfo()">About the Founders</button>
+    </div>
+
+    <!-- Founder Information Section -->
+    <div id="founderInfo" class="hidden text-center mt-4">
+      <h3 class="text-2xl font-bold">Our Founders</h3>
+      <div class="mt-4">
+        <p>
+          <strong>Akhil Jacob</strong> Ex - Datavant, Microsoft
+          <a href="https://www.linkedin.com/in/akhilcjacob" class="p-2" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/akhilcjacob" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </p>
+        <p>
+          <strong>Dami Dare</strong>: Ex - Robinhood, Microsoft
+          <a href="https://www.linkedin.com/in/dami-d-68676744/" class="p-2" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/daredammy" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Existing HTML content -->
+
   </div>
 
   <script>
@@ -112,6 +164,17 @@
       var form = document.getElementById('emailForm');
       form.classList.remove('visible');
     }
+    function toggleFounderInfo() {
+      var info = document.getElementById('founderInfo');
+      if (info.classList.contains('hidden')) {
+        info.classList.remove('hidden');
+        info.classList.add('visible');
+      } else {
+        info.classList.remove('visible');
+        info.classList.add('hidden');
+      }
+    }
+
   </script>
 </body>
 
